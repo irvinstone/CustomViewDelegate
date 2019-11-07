@@ -10,11 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var customView: CustomView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        customView.delegate = self
         // Do any additional setup after loading the view.
     }
+}
 
-
+extension ViewController: CustomViewProtocol {
+    func someAction() {
+        print("Something went wrong")
+    }
 }
 
